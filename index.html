@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rasa Nusantara — Restoran Khas pak wowo🤤</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo">RN</div>
+          <div>
+            <div>Rasa Bayar</div>
+            <div class="tagline">Restoran Khas pak wowo🤤</div>
+          </div>
+        </div>
+        <div class="menu">
+          <a href="#home">Beranda</a>
+          <a href="#menu">Menu</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#about">Tentang Kami</a>
+          <a class="cta" href="#kontak">Pesan</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div>
+          <img class="hero-img" src="img/logo.webp" alt="Masakan Indonesia" style="width: 1000px; height: auto; border-radius: 10px;" >
+          <h1 class="hero-title">Selamat datang di Rasa Nusantara — cita rasa asli Indonesia</h1>
+          <p class="lead">Kami menyajikan masakan tradisional dengan bahan segar dan resep turun-temurun yang autentik.</p>
+          <div class="hero-actions">
+            <button class="btn" onclick="scrollToSection('menu')">Lihat Menu</button>
+            <a class="btn btn-outline" href="#kontak">Hubungi Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Menu Unggulan</h2>
+      <p class="subtext">Beberapa hidangan favorit pelanggan kami.</p>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <h4>Rendang Daging</h4>
+          <a href="rendang.html"><img src="img/rendang.jpg" alt="Rendang"></a>
+          <p>Masakan khas Minang dengan daging sapi empuk dan bumbu rempah melimpah.</p>
+          <span class="price">Rp48.000</span>
+        </div>
+        <div class="menu-card">
+          <h4>Sate Padang</h4>
+          <a href="satepadang.html"><img src="img/sate_padang.jpg" alt="Sate Ayam"></a>
+          <p>Sate padang lezat disajikan dengan bumbu kacang gurih dan lontong hangat.</p>
+          <span class="price">Rp26.000</span>
+        </div>
+        <div class="menu-card">
+          <h4>Ayam Pop</h4>
+          <a href="ayampop.html"><img src="img/ayampop.webp" alt="Ayam pop"></a>
+          <p>Ayam fresh Yang di dimasak menggunakan rempah-rempah, Di sajikan dengan nasi hangat.</p>
+          <span class="price">Rp22.000</span>
+        </div>
+        <div class="menu-card">
+          <h4>Sop Iga sapi</h4>
+          <a href="sopiga.html"><img src="img/sop.jpeg" alt="Sop Iga"></a>
+          <p>Kuah bening segar dengan iga sapi empuk, cocok dinikmati saat hangat.</p>
+          <span class="price">Rp55.000</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeri">
+      <h2>Galeri Restoran</h2>
+      <p class="subtext">Suasana dan hidangan khas Rasa Nusantara.</p>
+      <div class="gallery">
+        <img src="img/suasanaresto.jpg" alt="Restoran">
+        <img src="img/suasana ren.jpg" alt="Hidangan">
+        <img src="img/suasana-MEJA.jpg" alt="Meja Makan">
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <h2>Tentang Kami</h2>
+      <p class="subtext">Tim kami berkomitmen memberikan pengalaman kuliner terbaik.</p>
+      <div class="team">
+        <div class="member">
+          <img src="img/suasanaresto.jpg" alt="Arief" style="width: 100px; height: 100px; border-radius: 50px;">
+          <h4>Arief Rahman</h4>
+          <p>Head Chef - Spesialis masakan tradisional dengan pengalaman 10+ tahun.</p>
+        </div>
+        <div class="member">
+          <img src="https://source.unsplash.com/100x100/?manager" alt="Dewi">
+          <h4>Dewi Sari</h4>
+          <p>Manajer Operasional - Mengatur kualitas pelayanan dan kepuasan pelanggan.</p>
+        </div>
+        <div class="member">
+          <img src="https://source.unsplash.com/100x100/?marketing" alt="Maya">
+          <h4>Maya Nur</h4>
+          <p>Marketing - Menangani promosi, media sosial, dan event kuliner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact">
+      <h2>Kontak & Lokasi</h2>
+      <div class="contact-info">
+        <div class="card">
+          <h4>Alamat</h4>
+          <p>Jalan Kenanga No. 12, Kecamatan Melati — Kota Contoh, 40211</p>
+          <h4>Telepon</h4>
+          <p>0812-xxxx-xxx (WhatsApp)</p>
+          <h4>Jam Buka</h4>
+          <p>Setiap hari, 10:00 - 21:00</p>
+        </div>
+        <div class="card">
+          <h4>Form Pesanan</h4>
+          <form id="orderForm" onsubmit="return submitOrder(event)">
+            <label>Nama</label>
+            <input id="name" required />
+            <label>Pesanan</label>
+            <input id="item" required placeholder="Contoh: Nasi Goreng x2" />
+            <label>Catatan</label>
+            <input id="note" />
+            <button class="btn" type="submit">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Rasa Nusantara — Semua Hak Dilindungi.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
